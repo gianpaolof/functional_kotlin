@@ -10,7 +10,8 @@ repositories {
 }
 // Using extra property
 project.extra["http4kVersion"] = "4.32.3.0"
-
+project.extra["pesticideVersion"] = "1.6.6"
+project.extra["jsoupversion"] = "1.12.1"
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation("io.strikt:strikt-core:0.34.0")
@@ -23,7 +24,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
     testImplementation("io.mockk:mockk:1.13.8")
     testImplementation("org.http4k:http4k-client-jetty:${rootProject.extra["http4kVersion"]}")
-
+    testImplementation( "com.ubertob.pesticide:pesticide-core:${rootProject.extra["pesticideVersion"]}")
+    testImplementation ("org.jsoup:jsoup:${rootProject.extra["jsoupversion"]}")
     // Other dependencies...
 }
 
