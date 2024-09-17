@@ -39,7 +39,7 @@ class SeeTodoList {
 
     private fun startTheApplication(lists: Map<User, List<ToDoList>>): ApplicationForAT {
         val port = 8081 //different from main
-        val server = Zettai(lists).asServer(Jetty(port))
+        val server = Zettai2(lists).asServer(Jetty(port))
         server.start()
         //This part creates a client filter
         // that automatically sets the base URI for all requests made by this client.
