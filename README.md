@@ -1,2 +1,3 @@
-Another silly project for my experiments.
-This one is about functional programming
+A web server written in functional kotlin.
+From the book "From Objects to Functions"
+https://pragprog.com/titles/uboop/from-objects-to-functions/
