@@ -3,8 +3,9 @@ package ddt.exercises
 import com.ubertob.pesticide.core.*
 
 /*
-INCOMPLETE: just to practise the pesticide lib
- */
+INCOMPLETE
+just to gain more confidence with the pesticide ddt lib
+*/
 
 
 typealias CustomerBag = MutableList<Item>
