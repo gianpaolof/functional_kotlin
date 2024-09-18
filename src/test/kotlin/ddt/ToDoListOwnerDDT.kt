@@ -9,7 +9,16 @@ import ddt.tooling.ZettaiActions
 import strikt.api.Assertion
 import strikt.api.expectThat
 import strikt.assertions.*
-
+/*to represent the Zettai
+user that owns some to-do lists, we can create an actor called ToDoListOwnerThe actor can only act on the application using the DDT actions. For this
+reason, we need to pass the ZettaiAction interface as a generic parameter to the
+actor.Our actors are representations of the real human beings that use our software. Their
+steps must represent the interactions they could have with our system. Hence, writing
+our tests as a list of actor steps nudges us toward writing in a way that’s closer to
+the actual human interaction than the technical implementation.
+Moreover, without the actors, we’ll clutter the tests themselves with a lot of compli-
+cated assertions. For this reason, we want to keep all assertions inside the actors’
+methods, so tests will stay readable and clean*/
 class ToDoListOwnerDDT (override val name: String) : DdtActor<ZettaiActions>() {
 
     val user = User(name)
