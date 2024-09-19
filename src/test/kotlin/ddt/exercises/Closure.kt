@@ -1,4 +1,4 @@
-/*
+package ddt.exercises/*
     apiCall -> is part of the lambda function that createRateLimiter returns. This lambda represents a rate-limited version of your API call logic.
 
     The parameter passed to createRateLimiter (let's call it apiCallFunction for clarity) is the actual API call logic you want to execute, but in a rate-limited manner.

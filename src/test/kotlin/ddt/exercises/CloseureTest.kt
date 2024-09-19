@@ -1,3 +1,5 @@
+package ddt.exercises
+
 import io.mockk.*
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test

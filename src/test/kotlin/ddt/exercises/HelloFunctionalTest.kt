@@ -1,3 +1,5 @@
+package ddt.exercises
+
 import org.junit.jupiter.api.Test
 
 fun sumAndLog(a: Int, b: Int, log: (Int) -> Unit): Int = (a + b).also(log)
