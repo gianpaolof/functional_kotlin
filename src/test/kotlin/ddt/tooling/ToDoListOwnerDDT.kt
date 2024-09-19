@@ -1,11 +1,10 @@
-package ddt
+package ddt.tooling
 
 import ListName
 import ToDoItem
 import ToDoList
 import User
 import com.ubertob.pesticide.core.DdtActor
-import ddt.tooling.ZettaiActions
 import strikt.api.Assertion
 import strikt.api.expectThat
 import strikt.assertions.*
@@ -54,10 +53,11 @@ class ToDoListOwnerDDT (override val name: String) : DdtActor<ZettaiActions>() {
         createList(user, ListName.fromUntrustedOrThrow(listName))
     }
 
-    fun `can add #item to the #listname`(itemName: String, listName: String) = step(itemName, listName) {
-        val item = ToDoItem(itemName)
-        addListItem(user, ListName.fromUntrustedOrThrow(listName), item)
-    }
+    fun `can add #item to the #listname`(itemName: String, listName: String) =
+        step(itemName, listName) {
+            val item = ToDoItem(itemName)
+            addListItem(user, ListName.fromUntrustedOrThrow(listName), item)
+        }
 
     private val Assertion.Builder<ToDoList>.itemNames: Assertion.Builder<List<String>>
         get() = get { items.map { it.description } }
