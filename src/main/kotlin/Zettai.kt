@@ -36,7 +36,7 @@ class Zettai(val hub: ZettaiHub) : HttpHandler {
     private fun addNewItem(request: Request): Response {
         val user = request.path("user")
             ?.let(::User)
-            ?: return Response(Status.BAD_REQUEST)
+            ?: return Response(Status.BAD_REQUEST) //provides a default value if the left side of the expression is null.
         val listName = request.path("listname")
             ?.let(ListName.Companion::fromUntrusted)
             ?: return Response(Status.BAD_REQUEST)
