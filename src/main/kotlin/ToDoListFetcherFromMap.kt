@@ -1,13 +1,4 @@
-
-import ListName
-import ToDoList
-import ToDoListUpdatableFetcher
-import User
-
-
 typealias ToDoListStore = MutableMap<User, MutableMap<ListName, ToDoList>>
-
-
 
 data class ToDoListFetcherFromMap(
     private val store: ToDoListStore
