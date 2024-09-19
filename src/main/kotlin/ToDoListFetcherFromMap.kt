@@ -1,4 +1,3 @@
-package com.ubertob.fotf.zettai.domain
 
 import ListName
 import ToDoList

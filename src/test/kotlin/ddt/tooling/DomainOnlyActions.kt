@@ -4,14 +4,14 @@ package ddt.tooling
 import ListName
 import ToDoItem
 import ToDoList
+import ToDoListFetcherFromMap
 import ToDoListHub
+import ToDoListStore
 import User
-import com.ubertob.fotf.zettai.domain.ToDoListFetcherFromMap
-import com.ubertob.fotf.zettai.domain.ToDoListStore
+
 import com.ubertob.pesticide.core.DdtProtocol
 import com.ubertob.pesticide.core.DomainOnly
 import com.ubertob.pesticide.core.Ready
-import ddt.ToDoListOwnerDDT
 
 /*
 Each of our concrete actions needs to inherit the ZettaiActions interface.

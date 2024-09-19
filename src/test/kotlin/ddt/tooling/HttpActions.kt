@@ -5,15 +5,14 @@ import HtmlPage
 import ListName
 import ToDoItem
 import ToDoList
+import ToDoListFetcherFromMap
 import ToDoListHub
 import User
 import Zettai
-import com.ubertob.fotf.zettai.domain.ToDoListFetcherFromMap
 import com.ubertob.pesticide.core.DdtProtocol
 import com.ubertob.pesticide.core.DomainSetUp
 import com.ubertob.pesticide.core.Http
 import com.ubertob.pesticide.core.Ready
-import ddt.ToDoListOwnerDDT
 import org.http4k.client.JettyClient
 import org.http4k.core.Method
 import org.http4k.core.Request
