@@ -10,12 +10,9 @@ the business logic at all
 in the hexagonkt example, the hub is the appointment data model
  */
 
-interface ZettaiHub {
-    fun getList(user: User, listName: ListName): ToDoList?
-    fun addItemToList(user: User, listName: ListName, item: ToDoItem): ToDoList?
-}
-
-class ToDoListHub(private val fetcher: IToDoListFetcher) : ZettaiHub {
+//in the class ctor we use functional dependency Injection
+// to allow the domain to communicate with the external services
+class ToDoListHub(private val fetcher: IToDoListFetcher) : IZettaiHub {
 
     override fun getList(user: User, listName: ListName): ToDoList? =
         fetcher(user, listName)

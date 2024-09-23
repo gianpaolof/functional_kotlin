@@ -8,7 +8,7 @@ import org.http4k.routing.routes
 /**
  * The application needs the hub
  */
-class Zettai(val hub: ZettaiHub) : HttpHandler {
+class Zettai(val hub: IZettaiHub) : HttpHandler {
 
     val httpHandler = routes(
         "/ping" bind Method.GET to { Response(Status.OK) },
