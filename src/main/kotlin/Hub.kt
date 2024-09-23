@@ -15,7 +15,7 @@ interface ZettaiHub {
     fun addItemToList(user: User, listName: ListName, item: ToDoItem): ToDoList?
 }
 
-class ToDoListHub(private val fetcher: IToDoListUpdatableFetcher) : ZettaiHub {
+class ToDoListHub(private val fetcher: IToDoListFetcher) : ZettaiHub {
 
     override fun getList(user: User, listName: ListName): ToDoList? =
         fetcher(user, listName)

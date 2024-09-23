@@ -4,7 +4,7 @@ package ddt.tooling
 import ListName
 import ToDoItem
 import ToDoList
-import ToDoListFetcherFromMap
+import ToDoListStoreFetcher
 import ToDoListHub
 import ToDoListStore
 import User
@@ -21,7 +21,7 @@ class DomainOnlyActions : ZettaiActions{
     override fun prepare() = Ready
 
     private val store: ToDoListStore = mutableMapOf()
-    private val fetcher = ToDoListFetcherFromMap(store)
+    private val fetcher = ToDoListStoreFetcher(store)
 
     private val hub = ToDoListHub(fetcher)
 

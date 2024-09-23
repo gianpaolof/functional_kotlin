@@ -1,6 +1,6 @@
 typealias ToDoListFetcher = (user: User, listName: ListName) -> ToDoList?
 
-interface IToDoListUpdatableFetcher : ToDoListFetcher {
+interface IToDoListFetcher : ToDoListFetcher {
 
     override fun invoke(user: User, listName: ListName): ToDoList?
 

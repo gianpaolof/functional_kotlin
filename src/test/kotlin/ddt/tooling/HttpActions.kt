@@ -5,7 +5,7 @@ import HtmlPage
 import ListName
 import ToDoItem
 import ToDoList
-import ToDoListFetcherFromMap
+import ToDoListStoreFetcher
 import ToDoListHub
 import User
 import Zettai
@@ -34,7 +34,7 @@ Each of our concrete actions needs to inherit the ZettaiActions interface.
  */
 data class HttpActions(val env: String = "local") : ZettaiActions {
 
-    private val fetcher = ToDoListFetcherFromMap(mutableMapOf())
+    private val fetcher = ToDoListStoreFetcher(mutableMapOf())
     private val hub = ToDoListHub(fetcher)
 
     val zettaiPort = 8081 //different from the one in main
